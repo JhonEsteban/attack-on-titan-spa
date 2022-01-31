@@ -2,12 +2,14 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import MainContent from '../components/MainContent';
 
-import Characters from '../pages/Characters';
-import Character from '../pages/Character';
-import Walls from '../pages/Walls';
-import Wall from '../pages/Wall';
-import Armys from '../pages/Armys';
-import Army from '../pages/Army';
+import Characters from '../pages/characters/Characters';
+import SingleCharacter from '../pages/characters/SingleCharacter';
+
+import Walls from '../pages/walls/Walls';
+import SingleWall from '../pages/walls/SingleWall';
+
+import Armys from '../pages/armys/Armys';
+import SingleArmy from '../pages/armys/SingleArmy';
 
 const AppRouter = () => {
   return (
@@ -15,13 +17,13 @@ const AppRouter = () => {
       <MainContent>
         <Routes>
           <Route path='/characters' element={<Characters />} />
-          <Route path='/characters/:characterId' element={<Character />} />
+          <Route path='/character/:characterId' element={<SingleCharacter />} />
 
           <Route path='/walls' element={<Walls />} />
-          <Route path='/walls/:wallId' element={<Wall />} />
+          <Route path='/wall/:wallId' element={<SingleWall />} />
 
           <Route path='/armys' element={<Armys />} />
-          <Route path='/armys/:armysId' element={<Army />} />
+          <Route path='/army/:armysId' element={<SingleArmy />} />
 
           <Route path='*' element={<Navigate to='/characters' />} />
         </Routes>
