@@ -10,7 +10,7 @@ const useSingleCharacter = (characterId: string) => {
   const [characterData] = character;
 
   useEffect(() => {
-    getResourceById('characters', characterId).then((character) => {
+    getResourceById('characters', characterId).then(({ character }) => {
       setCharacter(character);
       setLoading(false);
     });

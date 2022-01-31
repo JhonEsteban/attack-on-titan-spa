@@ -9,8 +9,7 @@ const getResourceById = async (name: string, id: string) => {
       throw new Error(message);
     }
 
-    const { character } = await reponse.json();
-    return character;
+    return await reponse.json();
   } catch (err) {
     return err;
   }
