@@ -23,7 +23,7 @@ const AppRouter = () => {
           <Route path='/wall/:wallId' element={<SingleWall />} />
 
           <Route path='/armys' element={<Armys />} />
-          <Route path='/army/:armysId' element={<SingleArmy />} />
+          <Route path='/army/:armyId' element={<SingleArmy />} />
 
           <Route path='*' element={<Navigate to='/characters' />} />
         </Routes>
